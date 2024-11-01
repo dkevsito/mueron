@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DIA DE MUERTOS</title>
+    <style>
+        body {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            background-image: url('img/fondo.jpeg'); /* Nombre del archivo de la imagen local */
+            background-size: cover;
+            background-position: center;
+            color: #f1efef;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #FFB600;
+        }
+        .menu {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #FFB600;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #FFA500;
+        }
+        .content {
+            margin-top: 20px;
+            display: none;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+
+<h1>Menú del Día de Muertos</h1>
+<div class="menu">
+    <button onclick="mostrarContenido('ofrendas')">Ofrendas</button>
+    <button onclick="mostrarContenido('comida')">Comida Típica</button>
+    <button onclick="mostrarContenido('actividades')">Actividades</button>
+    <button onclick="ocultarContenido()">Cerrar</button>
+</div>
+
+<div id="ofrendas" class="content">
+    <h2>Ofrendas del Día de Muertos</h2>
+    <ul>
+        <li>Fotografías de los difuntos</li>
+        <li>Velas</li>
+        <li>Flores de cempasúchil</li>
+        <li>Comida favorita del difunto</li>
+    </ul>
+    <img src="img/actividades.jpeg" alt="Ofrenda del Día de Muertos">
+</div>
+
+<div id="comida" class="content">
+    <h2>Comida Típica del Día de Muertos</h2>
+    <ul>
+        <li>Pan de muerto</li>
+        <li>Calaveras de azúcar</li>
+        <li>Atole</li>
+        <li>Tamales</li>
+    </ul>
+    <img src="img/comida.jpeg" alt="Comida Típica del Día de Muertos">
+</div>
+
+<div id="actividades" class="content">
+    <h2>Actividades del Día de Muertos</h2>
+    <ul>
+        <li>Visitar panteones</li>
+        <li>Decoración de altares</li>
+        <li>Hacer una procesión</li>
+    </ul>
+    <img src="img/actividades.jpeg" alt="Actividades del Día de Muertos">
+</div>
+<div class="gif-container">
+    <img src="img/nn.gif" alt="Animación del Día de Muertos">
+</div>
+
+
+<script>
+    function mostrarContenido(opcion) {
+        const contenidos = document.querySelectorAll('.content');
+        contenidos.forEach(content => content.style.display = 'none');
+        document.getElementById(opcion).style.display = 'block';
+    }
+
+    function ocultarContenido() {
+        const contenidos = document.querySelectorAll('.content');
+        contenidos.forEach(content => content.style.display = 'none');
+    }
+</script>
+
+</body>
+</html>
